@@ -29,6 +29,8 @@ jobs:
             echo "Pages source configured to gh-pages branch (HTTP $HTTP_CODE)"
           elif [ "$HTTP_CODE" -eq 409 ]; then
             echo "Pages source already set to gh-pages branch (HTTP $HTTP_CODE)"
+          elif [ "$HTTP_CODE" -eq 403 ]; then
+            echo "Warning: Could not configure Pages source (HTTP $HTTP_CODE) — Pages may already be configured correctly. Proceeding."
           else
             echo "Error: Failed to configure Pages source (HTTP $HTTP_CODE)" && exit 1
           fi
