@@ -10,18 +10,12 @@ on:
 
 concurrency: preview-${{ github.ref }}
 
-permissions:
-  contents: write
-  pull-requests: write
-  pages: write
-  id-token: write
-
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,21 +24,3 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: .
-
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: _site
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
