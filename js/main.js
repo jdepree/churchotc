@@ -10,14 +10,14 @@
   var closeBtn = document.getElementById('announcement-close');
   if (!bar) return;
 
-  if (localStorage.getItem('announcement-dismissed') === '1') {
+  if (localStorage.getItem('announcement-easter-2026') === '1') {
     bar.classList.add('hidden');
   }
 
   if (closeBtn) {
     closeBtn.addEventListener('click', function () {
       bar.classList.add('hidden');
-      localStorage.setItem('announcement-dismissed', '1');
+      localStorage.setItem('announcement-easter-2026', '1');
     });
   }
 }());
