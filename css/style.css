@@ -385,6 +385,24 @@ h4 { font-size: 1.1rem; }
 .ministry-tile:hover .tile-link { opacity: 1; transform: translateY(0); }
 
 /* ----------------------------------------
+   NEWSLETTER PREVIEW SECTION
+   ---------------------------------------- */
+.newsletter-preview-section {
+  padding: clamp(60px, 8vw, 110px) var(--gutter);
+  background: var(--bg-alt);
+}
+.newsletter-preview-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.newsletter-preview-section .section-header p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--text-light);
+  font-size: 1.05rem;
+}
+
+/* ----------------------------------------
    CTA SECTION
    ---------------------------------------- */
 .cta-section {

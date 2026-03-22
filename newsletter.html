@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Happenings — Church of The Cross | Evergreen, CO</title>
+  <meta name="description" content="Read the Weekly Happenings newsletter from Church of the Cross in Evergreen, CO — your source for announcements, events, and community news.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    /* ---- Page hero ---- */
+    .newsletter-page-hero {
+      background: var(--primary);
+      padding: clamp(60px, 8vw, 110px) var(--gutter) clamp(50px, 7vw, 90px);
+      text-align: center;
+      color: var(--white);
+    }
+    .newsletter-page-hero h1 {
+      color: var(--white);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 0.75rem;
+    }
+    .newsletter-page-hero p {
+      color: rgba(255,255,255,0.8);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* ---- Latest issue ---- */
+    .latest-issue-section {
+      padding: clamp(60px, 8vw, 100px) var(--gutter);
+      background: var(--bg);
+    }
+    .latest-issue-section .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .latest-issue-section h2 {
+      margin-bottom: 0.5rem;
+    }
+    .latest-issue-section .issue-meta {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    .latest-issue-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .latest-issue-hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 2.5rem;
+    }
+    .latest-issue-body {
+      max-width: 780px;
+    }
+    .latest-issue-body h3 {
+      font-size: 1.25rem;
+      margin: 2rem 0 0.6rem;
+      color: var(--primary);
+    }
+    .latest-issue-body p {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .latest-issue-body ul {
+      color: var(--text-light);
+      line-height: 1.8;
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .issue-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ---- Past issues grid ---- */
+    .past-issues-section {
+      padding: clamp(50px, 7vw, 90px) var(--gutter);
+      background: var(--bg-alt);
+    }
+    .past-issues-section .past-issues-header {
+      max-width: var(--max-width);
+      margin: 0 auto 2.5rem;
+    }
+    .past-issues-section .past-issues-header h2 { margin-bottom: 0.5rem; }
+    .past-issues-section .past-issues-header p { color: var(--text-light); }
+    .past-issues-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    article.newsletter-card {
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+      background: var(--bg);
+    }
+    article.newsletter-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    article.newsletter-card .story-card-image { height: 220px; overflow: hidden; }
+    article.newsletter-card .story-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    article.newsletter-card:hover .story-card-image img { transform: scale(1.05); }
+    article.newsletter-card .story-card-body { padding: 28px; }
+
+    /* ---- Subscribe bar ---- */
+    .newsletter-signup-bar {
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(50px, 7vw, 80px) var(--gutter);
+      text-align: center;
+    }
+    .newsletter-signup-bar h3 { color: var(--accent); margin-bottom: 0.75rem; }
+    .newsletter-signup-bar p  { color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 1.5rem; }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar" id="announcement-bar">
+    <p>Please join us for Worship on April 2 at 7:00 PM for our Maundy Thursday Service and April 3 at 7:00 PM for our Good Friday Service!</p>
+    <button class="announcement-close" id="announcement-close" aria-label="Close announcement">×</button>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="images/logo.webp" alt="Church of the Cross" width="140" height="70">
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown active">
+            <a href="#" class="nav-link" aria-haspopup="true">Who We Are</a>
+            <ul class="dropdown">
+              <li><a href="about.html">About</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="stories.html">Stories</a></li>
+              <li><a href="newsletter.html">Weekly Happenings</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link" aria-haspopup="true">Ministries</a>
+            <ul class="dropdown">
+              <li><a href="outreach.html">Outreach</a></li>
+              <li><a href="growth.html">Growth</a></li>
+              <li><a href="youth.html">Youth</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link" aria-haspopup="true">Plan A Visit</a>
+            <ul class="dropdown">
+              <li><a href="worship.html">Worship</a></li>
+              <li><a href="calendar.html">Calendar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="give.html" class="nav-link">Give</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-social">
+        <a href="https://www.youtube.com/channel/UCgapPZ-cvSYc31N0Y9PE3ow" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/Evergreenchurchofthecross" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         PAGE HEADING
+         ============================================================ -->
+    <div class="newsletter-page-hero">
+      <span class="overline" style="color: var(--accent);">Newsletter</span>
+      <h1>Weekly Happenings</h1>
+      <p>Your weekly source for announcements, upcoming events, and inspiring stories from the Church of the Cross community.</p>
+    </div>
+
+
+    <!-- ============================================================
+         LATEST ISSUE
+         ─────────────────────────────────────────────────────────────
+         TO ADD A NEW ISSUE:
+           1. Copy the entire block below from "LATEST ISSUE START"
+              to "LATEST ISSUE END".
+           2. Paste it right here (above the current issue), replacing
+              the image, date, title, and body text with the new content.
+           3. Move the current latest issue to the "Past Issues" grid
+              at the bottom by copying its article.newsletter-card block
+              and pasting it at the TOP of that grid.
+         ============================================================ -->
+
+    <!-- LATEST ISSUE START -->
+    <section class="latest-issue-section" id="latest">
+      <div class="latest-issue-inner">
+
+        <span class="section-label">Latest Issue</span>
+        <h2>Spring is in the Air</h2>
+        <p class="issue-meta">March 16, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Holy Week</span></p>
+
+        <img class="latest-issue-hero-img"
+             src="images/cross-flowers.webp"
+             alt="Spring is in the Air — March 16, 2025 newsletter cover">
+
+        <div class="latest-issue-body">
+
+          <p>Palm Sunday is almost here, and the Easter season is bringing new life to our community. Whether you're a longtime member or visiting for the first time, there is a place for you in every service this Holy Week.</p>
+
+          <h3>Holy Week Schedule</h3>
+          <ul>
+            <li><strong>Palm Sunday, April 13</strong> — Worship at 9:30 a.m. with processional and special music</li>
+            <li><strong>Maundy Thursday, April 17 at 7:00 p.m.</strong> — Communion service in the sanctuary</li>
+            <li><strong>Good Friday, April 18 at 7:00 p.m.</strong> — Tenebrae service and candlelight reflection</li>
+            <li><strong>Easter Sunday, April 20 at 9:30 a.m.</strong> — Celebration worship with brass and choir; Easter egg hunt for kids to follow</li>
+          </ul>
+
+          <h3>A Word from Pastor Tyler</h3>
+          <p>"Holy Week is the heartbeat of our faith. From the triumphal entry to the empty tomb, we are invited to walk alongside Jesus through the full story of redemption. I hope you'll join us for as many services as you can this week. Bring a neighbor, bring a friend — bring anyone who needs to hear that they are loved."</p>
+
+          <h3>Easter Egg Hunt</h3>
+          <p>Our annual Easter egg hunt returns after the Easter Sunday service! Kids of all ages are welcome on the front lawn. We need volunteers to help hide eggs and supervise stations — please sign up at the welcome table or email <a href="mailto:office@churchotc.com">office@churchotc.com</a>.</p>
+
+          <h3>Upcoming Events</h3>
+          <ul>
+            <li>April 6 — Lenten Potluck &amp; Fellowship, 6:00 p.m. in Fellowship Hall</li>
+            <li>April 9 — Youth Group meets at 6:30 p.m.</li>
+            <li>April 20 — Easter Sunday Celebration</li>
+            <li>April 27 — New Members Class begins, 11:00 a.m.</li>
+          </ul>
+
+          <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.9rem;">
+            Blessings,<br>
+            <strong>The Church of the Cross Staff</strong>
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- LATEST ISSUE END -->
+
+    <hr class="issue-divider">
+
+
+    <!-- ============================================================
+         PAST ISSUES
+         ─────────────────────────────────────────────────────────────
+         TO ADD AN ARCHIVED ISSUE: copy one of the article blocks
+         below and paste it at the TOP of this grid, filling in the
+         correct image, date, title, excerpt, and optional category.
+         ============================================================ -->
+    <section class="past-issues-section">
+      <div class="past-issues-header">
+        <h2>Past Issues</h2>
+        <p>Browse our archive of previous Weekly Happenings newsletters.</p>
+      </div>
+      <div class="past-issues-inner">
+        <div class="stories-grid">
+
+          <!-- ── ARCHIVE ISSUE TEMPLATE ───────────────────────────
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/YOUR-IMAGE.webp" alt="Weekly Happenings — MONTH DAY, YEAR" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">MONTH DAY, YEAR &nbsp;·&nbsp; <span style="color:var(--accent)">CATEGORY</span></p>
+              <h3>ISSUE TITLE</h3>
+              <p>Short excerpt or summary of the newsletter contents.</p>
+            </div>
+          </article>
+          ─────────────────────────────────────────────────────── -->
+
+          <!-- Issue: March 9, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/bible-hero.webp" alt="Weekly Happenings — March 9, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">March 9, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Lent</span></p>
+              <h3>Lenten Reflections</h3>
+              <p>Devotional reflections, a recap of our midweek prayer service, and volunteer opportunities for Holy Week. Plus: youth group updates and new Bible study times.</p>
+            </div>
+          </article>
+
+          <!-- Issue: March 2, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/exterior-playground.webp" alt="Weekly Happenings — March 2, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">March 2, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Community</span></p>
+              <h3>Community Service Day Recap</h3>
+              <p>Over 40 volunteers turned out for our Community Service Day! See photos, hear testimonials, and learn about our next outreach event coming up this spring.</p>
+            </div>
+          </article>
+
+          <!-- Issue: February 23, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/sanctuary.webp" alt="Weekly Happenings — February 23, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">February 23, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Worship</span></p>
+              <h3>A Season of Prayer</h3>
+              <p>Hear about our new Wednesday evening prayer gatherings, the 40-day prayer journal, and an update on our prayer chain ministry as we enter the Lenten season.</p>
+            </div>
+          </article>
+
+          <!-- Issue: February 16, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/youth-academy.webp" alt="Weekly Happenings — February 16, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">February 16, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Youth</span></p>
+              <h3>Youth Winter Retreat Highlights</h3>
+              <p>Our youth group returned from a transformative winter retreat in the mountains. Read their stories and learn how to support the next retreat in the fall.</p>
+            </div>
+          </article>
+
+          <!-- Issue: February 9, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/flowers-hero.webp" alt="Weekly Happenings — February 9, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">February 9, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Fellowship</span></p>
+              <h3>Love One Another: A Valentine's Reflection</h3>
+              <p>Reflecting on the greatest commandment: to love one another. Photos from our Valentine's fellowship dinner and how to get involved in our care ministry.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SUBSCRIBE BAR
+         ============================================================ -->
+    <div class="newsletter-signup-bar">
+      <h3>Never Miss an Issue</h3>
+      <p>Get the Weekly Happenings delivered straight to your inbox every week.</p>
+      <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Subscribe to Newsletter</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-section">
+        <h3>Join Us</h3>
+        <p>Worship: Sundays at 9:30 a.m.</p>
+        <address>
+          28253 Meadow Drive<br>
+          Evergreen, CO 80439
+        </address>
+        <p style="margin-top:10px;"><a href="tel:3036744130">303-674-4130</a></p>
+        <p><a href="mailto:office@churchotc.com">office@churchotc.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Stay in Touch</h3>
+        <p>Get to know Church of the Cross through our newsletters, devotionals, and other inspiring content. Or come meet us at one of our upcoming services, Bible studies, or meet ups.</p>
+        <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">Sign Up</a>
+        <div class="footer-social">
+          <a href="calendar.html" aria-label="Calendar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2a1 1 0 0 1 1 1v1h6V3a1 1 0 1 1 2 0v1h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2V3a1 1 0 0 1 1-1zm-3 8v10h14V10H5z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCgapPZ-cvSYc31N0Y9PE3ow" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Evergreenchurchofthecross" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2021–2024 Church of the Cross</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
