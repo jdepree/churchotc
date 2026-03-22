@@ -11,15 +11,104 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
   <style>
-    .newsletter-hero {
+    /* ---- Page hero ---- */
+    .newsletter-page-hero {
       background: var(--primary);
-      padding: clamp(60px, 8vw, 100px) var(--gutter);
+      padding: clamp(60px, 8vw, 110px) var(--gutter) clamp(50px, 7vw, 90px);
       text-align: center;
       color: var(--white);
     }
-    .newsletter-hero h1 { color: var(--white); margin-bottom: 1rem; }
-    .newsletter-hero p  { color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
+    .newsletter-page-hero h1 {
+      color: var(--white);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 0.75rem;
+    }
+    .newsletter-page-hero p {
+      color: rgba(255,255,255,0.8);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
 
+    /* ---- Latest issue ---- */
+    .latest-issue-section {
+      padding: clamp(60px, 8vw, 100px) var(--gutter);
+      background: var(--bg);
+    }
+    .latest-issue-section .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .latest-issue-section h2 {
+      margin-bottom: 0.5rem;
+    }
+    .latest-issue-section .issue-meta {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    .latest-issue-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .latest-issue-hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 2.5rem;
+    }
+    .latest-issue-body {
+      max-width: 780px;
+    }
+    .latest-issue-body h3 {
+      font-size: 1.25rem;
+      margin: 2rem 0 0.6rem;
+      color: var(--primary);
+    }
+    .latest-issue-body p {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .latest-issue-body ul {
+      color: var(--text-light);
+      line-height: 1.8;
+      padding-left: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .issue-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+      max-width: var(--max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ---- Past issues grid ---- */
+    .past-issues-section {
+      padding: clamp(50px, 7vw, 90px) var(--gutter);
+      background: var(--bg-alt);
+    }
+    .past-issues-section .past-issues-header {
+      max-width: var(--max-width);
+      margin: 0 auto 2.5rem;
+    }
+    .past-issues-section .past-issues-header h2 { margin-bottom: 0.5rem; }
+    .past-issues-section .past-issues-header p { color: var(--text-light); }
+    .past-issues-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
     article.newsletter-card {
       border: 1px solid var(--border);
       overflow: hidden;
@@ -27,19 +116,20 @@
       background: var(--bg);
     }
     article.newsletter-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-    article.newsletter-card .story-card-image { height: 240px; overflow: hidden; }
+    article.newsletter-card .story-card-image { height: 220px; overflow: hidden; }
     article.newsletter-card .story-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
     article.newsletter-card:hover .story-card-image img { transform: scale(1.05); }
-    article.newsletter-card .story-card-body { padding: 32px; }
+    article.newsletter-card .story-card-body { padding: 28px; }
 
+    /* ---- Subscribe bar ---- */
     .newsletter-signup-bar {
-      background: var(--bg-alt);
-      border-top: 1px solid var(--border);
-      padding: clamp(40px, 5vw, 60px) var(--gutter);
+      background: var(--primary);
+      color: var(--white);
+      padding: clamp(50px, 7vw, 80px) var(--gutter);
       text-align: center;
     }
-    .newsletter-signup-bar h3 { margin-bottom: 0.75rem; }
-    .newsletter-signup-bar p  { color: var(--text-light); max-width: 520px; margin: 0 auto 1.5rem; }
+    .newsletter-signup-bar h3 { color: var(--accent); margin-bottom: 0.75rem; }
+    .newsletter-signup-bar p  { color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 1.5rem; }
   </style>
 </head>
 <body>
@@ -100,104 +190,183 @@
   </header>
 
   <main>
-    <!-- Page Header -->
-    <div class="newsletter-hero">
+
+    <!-- ============================================================
+         PAGE HEADING
+         ============================================================ -->
+    <div class="newsletter-page-hero">
       <span class="overline" style="color: var(--accent);">Newsletter</span>
       <h1>Weekly Happenings</h1>
       <p>Your weekly source for announcements, upcoming events, and inspiring stories from the Church of the Cross community.</p>
     </div>
 
-    <!-- Newsletter Issues Grid -->
-    <section class="section">
-      <div class="stories-grid">
 
-        <!-- Issue: March 16, 2025 -->
-        <article class="newsletter-card">
-          <div class="story-card-image">
-            <img src="images/cross-flowers.webp" alt="Weekly Happenings — March 16, 2025" loading="lazy">
-          </div>
-          <div class="story-card-body">
-            <p class="story-card-meta">March 16, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Holy Week</span></p>
-            <h3>Spring is in the Air</h3>
-            <p>Palm Sunday and Holy Week services are around the corner. Read about upcoming Lenten gatherings, our annual Easter egg hunt, and a special message from Pastor Tyler about the meaning of Holy Week for our community.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 16px; display: inline-block;">Read More</a>
-          </div>
-        </article>
+    <!-- ============================================================
+         LATEST ISSUE
+         ─────────────────────────────────────────────────────────────
+         TO ADD A NEW ISSUE:
+           1. Copy the entire block below from "LATEST ISSUE START"
+              to "LATEST ISSUE END".
+           2. Paste it right here (above the current issue), replacing
+              the image, date, title, and body text with the new content.
+           3. Move the current latest issue to the "Past Issues" grid
+              at the bottom by copying its article.newsletter-card block
+              and pasting it at the TOP of that grid.
+         ============================================================ -->
 
-        <!-- Issue: March 9, 2025 -->
-        <article class="newsletter-card">
-          <div class="story-card-image">
-            <img src="images/bible-hero.webp" alt="Weekly Happenings — March 9, 2025" loading="lazy">
-          </div>
-          <div class="story-card-body">
-            <p class="story-card-meta">March 9, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Lent</span></p>
-            <h3>Lenten Reflections</h3>
-            <p>We're halfway through Lent. This week's newsletter shares devotional reflections, a recap of our midweek prayer service, and volunteer opportunities for Holy Week. Plus: youth group updates and new Bible study times.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 16px; display: inline-block;">Read More</a>
-          </div>
-        </article>
+    <!-- LATEST ISSUE START -->
+    <section class="latest-issue-section" id="latest">
+      <div class="latest-issue-inner">
 
-        <!-- Issue: March 2, 2025 -->
-        <article class="newsletter-card">
-          <div class="story-card-image">
-            <img src="images/exterior-playground.webp" alt="Weekly Happenings — March 2, 2025" loading="lazy">
-          </div>
-          <div class="story-card-body">
-            <p class="story-card-meta">March 2, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Community</span></p>
-            <h3>Community Service Day Recap</h3>
-            <p>Over 40 volunteers turned out for our Community Service Day! See photos, hear testimonials, and learn about our next outreach event coming up this spring. Thank you to everyone who served.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 16px; display: inline-block;">Read More</a>
-          </div>
-        </article>
+        <span class="section-label">Latest Issue</span>
+        <h2>Spring is in the Air</h2>
+        <p class="issue-meta">March 16, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Holy Week</span></p>
 
-        <!-- Issue: February 23, 2025 -->
-        <article class="newsletter-card">
-          <div class="story-card-image">
-            <img src="images/sanctuary.webp" alt="Weekly Happenings — February 23, 2025" loading="lazy">
-          </div>
-          <div class="story-card-body">
-            <p class="story-card-meta">February 23, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Worship</span></p>
-            <h3>A Season of Prayer</h3>
-            <p>As we enter Lent, we are invited into a deeper season of prayer. Hear about our new Wednesday evening prayer gatherings, how to participate in the 40-day prayer journal, and an update on our prayer chain ministry.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 16px; display: inline-block;">Read More</a>
-          </div>
-        </article>
+        <img class="latest-issue-hero-img"
+             src="images/cross-flowers.webp"
+             alt="Spring is in the Air — March 16, 2025 newsletter cover">
 
-        <!-- Issue: February 16, 2025 -->
-        <article class="newsletter-card">
-          <div class="story-card-image">
-            <img src="images/youth-academy.webp" alt="Weekly Happenings — February 16, 2025" loading="lazy">
-          </div>
-          <div class="story-card-body">
-            <p class="story-card-meta">February 16, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Youth</span></p>
-            <h3>Youth Winter Retreat Highlights</h3>
-            <p>Our youth group returned from a transformative winter retreat in the mountains. Read their stories, see the highlights, and learn how you can support the next retreat happening in the fall.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 16px; display: inline-block;">Read More</a>
-          </div>
-        </article>
+        <div class="latest-issue-body">
 
-        <!-- Issue: February 9, 2025 -->
-        <article class="newsletter-card">
-          <div class="story-card-image">
-            <img src="images/flowers-hero.webp" alt="Weekly Happenings — February 9, 2025" loading="lazy">
-          </div>
-          <div class="story-card-body">
-            <p class="story-card-meta">February 9, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Fellowship</span></p>
-            <h3>Love One Another: A Valentine's Reflection</h3>
-            <p>This Valentine's season, we reflect on the greatest commandment: to love one another. Read Pastor Tyler's devotional, see photos from our Valentine's fellowship dinner, and find out how to get involved in our care ministry.</p>
-            <a href="#" class="btn btn-outline" style="margin-top: 16px; display: inline-block;">Read More</a>
-          </div>
-        </article>
+          <p>Palm Sunday is almost here, and the Easter season is bringing new life to our community. Whether you're a longtime member or visiting for the first time, there is a place for you in every service this Holy Week.</p>
+
+          <h3>Holy Week Schedule</h3>
+          <ul>
+            <li><strong>Palm Sunday, April 13</strong> — Worship at 9:30 a.m. with processional and special music</li>
+            <li><strong>Maundy Thursday, April 17 at 7:00 p.m.</strong> — Communion service in the sanctuary</li>
+            <li><strong>Good Friday, April 18 at 7:00 p.m.</strong> — Tenebrae service and candlelight reflection</li>
+            <li><strong>Easter Sunday, April 20 at 9:30 a.m.</strong> — Celebration worship with brass and choir; Easter egg hunt for kids to follow</li>
+          </ul>
+
+          <h3>A Word from Pastor Tyler</h3>
+          <p>"Holy Week is the heartbeat of our faith. From the triumphal entry to the empty tomb, we are invited to walk alongside Jesus through the full story of redemption. I hope you'll join us for as many services as you can this week. Bring a neighbor, bring a friend — bring anyone who needs to hear that they are loved."</p>
+
+          <h3>Easter Egg Hunt</h3>
+          <p>Our annual Easter egg hunt returns after the Easter Sunday service! Kids of all ages are welcome on the front lawn. We need volunteers to help hide eggs and supervise stations — please sign up at the welcome table or email <a href="mailto:office@churchotc.com">office@churchotc.com</a>.</p>
+
+          <h3>Upcoming Events</h3>
+          <ul>
+            <li>April 6 — Lenten Potluck &amp; Fellowship, 6:00 p.m. in Fellowship Hall</li>
+            <li>April 9 — Youth Group meets at 6:30 p.m.</li>
+            <li>April 20 — Easter Sunday Celebration</li>
+            <li>April 27 — New Members Class begins, 11:00 a.m.</li>
+          </ul>
+
+          <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.9rem;">
+            Blessings,<br>
+            <strong>The Church of the Cross Staff</strong>
+          </p>
+        </div>
 
       </div>
     </section>
+    <!-- LATEST ISSUE END -->
 
-    <!-- Sign-up Bar -->
+    <hr class="issue-divider">
+
+
+    <!-- ============================================================
+         PAST ISSUES
+         ─────────────────────────────────────────────────────────────
+         TO ADD AN ARCHIVED ISSUE: copy one of the article blocks
+         below and paste it at the TOP of this grid, filling in the
+         correct image, date, title, excerpt, and optional category.
+         ============================================================ -->
+    <section class="past-issues-section">
+      <div class="past-issues-header">
+        <h2>Past Issues</h2>
+        <p>Browse our archive of previous Weekly Happenings newsletters.</p>
+      </div>
+      <div class="past-issues-inner">
+        <div class="stories-grid">
+
+          <!-- ── ARCHIVE ISSUE TEMPLATE ───────────────────────────
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/YOUR-IMAGE.webp" alt="Weekly Happenings — MONTH DAY, YEAR" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">MONTH DAY, YEAR &nbsp;·&nbsp; <span style="color:var(--accent)">CATEGORY</span></p>
+              <h3>ISSUE TITLE</h3>
+              <p>Short excerpt or summary of the newsletter contents.</p>
+            </div>
+          </article>
+          ─────────────────────────────────────────────────────── -->
+
+          <!-- Issue: March 9, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/bible-hero.webp" alt="Weekly Happenings — March 9, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">March 9, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Lent</span></p>
+              <h3>Lenten Reflections</h3>
+              <p>Devotional reflections, a recap of our midweek prayer service, and volunteer opportunities for Holy Week. Plus: youth group updates and new Bible study times.</p>
+            </div>
+          </article>
+
+          <!-- Issue: March 2, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/exterior-playground.webp" alt="Weekly Happenings — March 2, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">March 2, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Community</span></p>
+              <h3>Community Service Day Recap</h3>
+              <p>Over 40 volunteers turned out for our Community Service Day! See photos, hear testimonials, and learn about our next outreach event coming up this spring.</p>
+            </div>
+          </article>
+
+          <!-- Issue: February 23, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/sanctuary.webp" alt="Weekly Happenings — February 23, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">February 23, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Worship</span></p>
+              <h3>A Season of Prayer</h3>
+              <p>Hear about our new Wednesday evening prayer gatherings, the 40-day prayer journal, and an update on our prayer chain ministry as we enter the Lenten season.</p>
+            </div>
+          </article>
+
+          <!-- Issue: February 16, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/youth-academy.webp" alt="Weekly Happenings — February 16, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">February 16, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Youth</span></p>
+              <h3>Youth Winter Retreat Highlights</h3>
+              <p>Our youth group returned from a transformative winter retreat in the mountains. Read their stories and learn how to support the next retreat in the fall.</p>
+            </div>
+          </article>
+
+          <!-- Issue: February 9, 2025 -->
+          <article class="newsletter-card">
+            <div class="story-card-image">
+              <img src="images/flowers-hero.webp" alt="Weekly Happenings — February 9, 2025" loading="lazy">
+            </div>
+            <div class="story-card-body">
+              <p class="story-card-meta">February 9, 2025 &nbsp;·&nbsp; <span style="color:var(--accent)">Fellowship</span></p>
+              <h3>Love One Another: A Valentine's Reflection</h3>
+              <p>Reflecting on the greatest commandment: to love one another. Photos from our Valentine's fellowship dinner and how to get involved in our care ministry.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         SUBSCRIBE BAR
+         ============================================================ -->
     <div class="newsletter-signup-bar">
       <h3>Never Miss an Issue</h3>
       <p>Get the Weekly Happenings delivered straight to your inbox every week.</p>
-      <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Subscribe to Newsletter</a>
+      <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-accent" target="_blank" rel="noopener noreferrer">Subscribe to Newsletter</a>
     </div>
+
   </main>
 
   <footer class="site-footer">
