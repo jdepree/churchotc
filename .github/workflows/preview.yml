@@ -24,4 +24,3 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: .
-          deploy-url: https://churchotc.com
