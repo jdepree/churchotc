@@ -330,6 +330,26 @@ h4 { font-size: 1.1rem; }
 }
 .hero--home .hero-content h1 { max-width: 820px; }
 
+/* Video background for hero */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero-video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 */
+  min-height: 100%;
+  min-width: 177.78vh; /* 16:9 */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: 0;
+}
+
 /* ----------------------------------------
    MINISTRY TILES (home)
    ---------------------------------------- */
