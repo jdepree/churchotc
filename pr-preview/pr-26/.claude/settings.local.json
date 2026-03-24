@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(npx --yes sharp-cli --version)",
+      "Bash(grep -oh \"images/[^\"\"'''' \\)]*\" /c/workspace/churchotc/*.html)",
+      "Bash(npx sharp-cli:*)",
+      "Bash(npx --yes sharp-cli -i worship-tile.webp -o ./ resize 800)"
+    ]
+  }
+}
