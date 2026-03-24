@@ -331,6 +331,23 @@ h4 { font-size: 1.1rem; }
 }
 .hero--home .hero-content h1 { white-space: nowrap; }
 
+/* Service times panel (home hero) */
+.service-times {
+  margin-top: 1.75rem;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(200,169,110,0.5);
+  border-radius: 8px;
+  padding: 1.25rem 2rem;
+  display: inline-block;
+  text-align: left;
+}
+.service-times ul {
+  color: var(--white);
+  font-size: 1rem;
+  line-height: 2;
+}
+.service-times .service-times__highlight { color: var(--accent); }
+
 /* Video background for hero */
 .hero-video-bg {
   position: absolute;
