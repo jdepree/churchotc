@@ -6,9 +6,10 @@
    CUSTOM PROPERTIES
    ---------------------------------------- */
 :root {
-  --primary:      #2B3A4A;
-  --accent:       #C8A96E;
-  --accent-dark:  #A8893E;
+  --primary:        #2B3A4A;
+  --accent:         #C8A96E;
+  --accent-dark:    #A8893E;
+  --easter-yellow:  #F5C842;
   --bg:           #ffffff;
   --bg-alt:       #F7F5F1;
   --text:         #2c2c2c;
@@ -142,8 +143,8 @@ h4 { font-size: 1.1rem; }
    ANNOUNCEMENT BAR
    ---------------------------------------- */
 .announcement-bar {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--easter-yellow);
+  color: var(--text);
   padding: 10px var(--gutter);
   text-align: center;
   font-size: 0.85rem;
@@ -163,7 +164,7 @@ h4 { font-size: 1.1rem; }
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--text);
   font-size: 1.5rem;
   cursor: pointer;
   opacity: 0.65;
