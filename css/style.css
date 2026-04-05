@@ -28,6 +28,20 @@
 }
 
 /* ----------------------------------------
+   EASTER BANNER
+   ---------------------------------------- */
+.easter-banner {
+  background: #f5c842;
+  color: #2c2c2c;
+  text-align: center;
+  padding: 10px var(--gutter);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ----------------------------------------
    RESET / BASE
    ---------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
