@@ -9,7 +9,6 @@
   --primary:        #2B3A4A;
   --accent:         #C8A96E;
   --accent-dark:    #A8893E;
-  --easter-yellow:  #F5C842;
   --bg:           #ffffff;
   --bg-alt:       #F7F5F1;
   --text:         #2c2c2c;
@@ -26,6 +25,20 @@
   --max-width:     1200px;
   --gutter:        clamp(20px, 4vw, 60px);
   --transition:    0.25s ease;
+}
+
+/* ----------------------------------------
+   EASTER BANNER
+   ---------------------------------------- */
+.easter-banner {
+  background: #f5c842;
+  color: #2c2c2c;
+  text-align: center;
+  padding: 10px var(--gutter);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 /* ----------------------------------------
@@ -138,40 +151,6 @@ h4 { font-size: 1.1rem; }
 
 .btn-outline-white        { background: transparent; border-color: var(--white); color: var(--white); }
 .btn-outline-white:hover  { background: var(--white); color: var(--primary); }
-
-/* ----------------------------------------
-   ANNOUNCEMENT BAR
-   ---------------------------------------- */
-.announcement-bar {
-  background: var(--easter-yellow);
-  color: var(--text);
-  padding: 10px var(--gutter);
-  text-align: center;
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.announcement-bar p { margin: 0; }
-.announcement-bar.hidden { display: none; }
-
-.announcement-close {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: var(--text);
-  font-size: 1.5rem;
-  cursor: pointer;
-  opacity: 0.65;
-  line-height: 1;
-  padding: 4px 8px;
-}
-.announcement-close:hover { opacity: 1; }
 
 /* ----------------------------------------
    HEADER / NAV
