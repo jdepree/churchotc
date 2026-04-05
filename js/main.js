@@ -3,26 +3,6 @@
    ============================================================ */
 
 /* ----------------------------------------
-   ANNOUNCEMENT BAR
-   ---------------------------------------- */
-(function () {
-  var bar      = document.getElementById('announcement-bar');
-  var closeBtn = document.getElementById('announcement-close');
-  if (!bar) return;
-
-  if (localStorage.getItem('announcement-dismissed') === '1') {
-    bar.classList.add('hidden');
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
-      bar.classList.add('hidden');
-      localStorage.setItem('announcement-dismissed', '1');
-    });
-  }
-}());
-
-/* ----------------------------------------
    SCROLL-AWARE HEADER
    ---------------------------------------- */
 (function () {
