@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Outreach — Church of The Cross | Evergreen, CO</title>
-  <meta name="description" content="Sharing God's unconditional love with our neighbors and communities through mission trips, service, and Son-shine ministries.">
+  <title>Sermons — Church of The Cross | Evergreen, CO</title>
+  <meta name="description" content="Watch and listen to sermons from Church of the Cross in Evergreen, CO. Inspiring messages to grow your faith.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -15,8 +15,6 @@
 
   <!-- Easter Banner -->
   <div class="easter-banner">Christ has died, Christ has RISEN, Christ will come again!</div>
-
-
 
   <header class="site-header" id="site-header">
     <div class="header-inner">
@@ -31,7 +29,7 @@
               <li><a href="events.html">Events</a></li>
             </ul>
           </li>
-          <li class="nav-item has-dropdown active"><a href="#" class="nav-link">Ministries</a>
+          <li class="nav-item has-dropdown"><a href="#" class="nav-link">Ministries</a>
             <ul class="dropdown">
               <li><a href="outreach.html">Outreach</a></li>
               <li><a href="growth.html">Growth</a></li>
@@ -44,7 +42,7 @@
               <li><a href="calendar.html">Calendar</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="sermons.html" class="nav-link">Sermons</a></li>
+          <li class="nav-item active"><a href="sermons.html" class="nav-link">Sermons</a></li>
           <li class="nav-item"><a href="devotional.html" class="nav-link">Devotional</a></li>
           <li class="nav-item"><a href="give.html" class="nav-link">Give</a></li>
           <li class="nav-item"><a href="weekly-happenings.html" class="nav-link">Weekly Happenings</a></li>
@@ -60,81 +58,43 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero" style="background-image: url('images/outreach-hero.webp');">
+    <section class="hero" style="background-image: url('images/worship-hero.webp');">
       <div class="hero-content">
-        <span class="overline">Outreach</span>
-        <p class="tagline">Sharing God's unconditional love with our neighbors and communities.</p>
-        <h1>Faith needs action.</h1>
+        <span class="overline">The Word</span>
+        <h1>Sermons</h1>
+        <p>Hear God's word proclaimed through inspiring messages from our pastoral team. Watch recent sermons or browse our full archive on YouTube.</p>
+        <div style="margin-top: 2rem;">
+          <a href="https://www.youtube.com/channel/UCgapPZ-cvSYc31N0Y9PE3ow" class="btn btn-accent" target="_blank" rel="noopener">Watch on YouTube</a>
+        </div>
       </div>
     </section>
 
-    <!-- 3 Outreach Categories -->
+    <!-- Recent Sermons -->
     <section class="section">
       <div class="section-header text-center">
-        <span class="overline">How We Serve</span>
-        <h2>Putting Faith Into Practice</h2>
-        <p>We believe the church is most alive when it's giving itself away. Here's how we serve our neighbors — near and far.</p>
+        <span class="overline">Recent Messages</span>
+        <h2>Latest Sermons</h2>
+        <p>Our Sunday sermons are recorded and posted to our YouTube channel each week. Click below to watch the latest messages from Church of the Cross.</p>
       </div>
-      <div class="grid-3">
-        <div class="pillar-card">
-          <div class="pillar-icon">✈️</div>
-          <h3>Mission</h3>
-          <p>We organize group mission trips to Honduras, Belize, Uganda, and locally — partnering with communities to address real needs in the name of Christ. These trips change lives on both sides.</p>
+      <div style="max-width: 860px; margin: 0 auto; text-align: center; margin-top: 40px;">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=UCgapPZ-cvSYc31N0Y9PE3ow"
+                  title="Church of the Cross sermons"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
         </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🙌</div>
-          <h3>Service</h3>
-          <p>Members volunteer regularly at local Christian organizations and community projects throughout the Evergreen area. Whether it's a food pantry, a shelter, or a community cleanup, we show up.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">☀️</div>
-          <h3>Son-shine</h3>
-          <p>Small acts of love make a big difference. Our Son-shine ministry sends birthday and anniversary cards, bakes farmer's market pies, collects toys for children globally, and carols at local senior facilities.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Prayer Request Section -->
-    <section class="section--alt section--full">
-      <div class="section" style="padding-top:0; padding-bottom:0;">
-        <div class="two-col">
-          <div>
-            <span class="overline">Prayer</span>
-            <h2>Submit a Prayer Request</h2>
-            <p>We believe in the power of prayer. Our congregation prays regularly for the needs of our community — both those within our church family and those beyond it.</p>
-            <p>Share your prayer request below and our team will lift you up in prayer. All requests are held in confidence.</p>
-          </div>
-          <div>
-            <form data-form="prayer" action="#">
-              <div class="form-group">
-                <label for="pr-name">Name <span style="color:var(--accent)">*</span></label>
-                <input type="text" id="pr-name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="pr-email">Email <span style="color:var(--accent)">*</span></label>
-                <input type="email" id="pr-email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="pr-subject">Subject</label>
-                <input type="text" id="pr-subject" name="subject" placeholder="Prayer Request">
-              </div>
-              <div class="form-group">
-                <label for="pr-request">Your Request <span style="color:var(--accent)">*</span></label>
-                <textarea id="pr-request" name="request" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
-              <div class="form-success">Thank you for sharing. Our congregation will be praying for you.</div>
-            </form>
-          </div>
+        <div style="margin-top: 32px;">
+          <a href="https://www.youtube.com/channel/UCgapPZ-cvSYc31N0Y9PE3ow" class="btn btn-primary" target="_blank" rel="noopener">View All Sermons on YouTube</a>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="cta-section">
-      <h2>Ready to serve?</h2>
-      <p>Whether you want to join a mission trip, volunteer locally, or contribute to the Son-shine ministry, we'd love to connect you with a way to serve.</p>
-      <a href="mailto:office@churchotc.com" class="btn btn-primary">Get Involved</a>
+      <h2>Join us in person this Sunday.</h2>
+      <p>Experience worship and the Word together with our church family. We gather every Sunday at 9:30 AM at 28253 Meadow Drive, Evergreen, CO.</p>
+      <a href="worship.html" class="btn btn-primary">Plan A Visit</a>
     </section>
   </main>
 
