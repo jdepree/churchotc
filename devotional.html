@@ -3,20 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Outreach — Church of The Cross | Evergreen, CO</title>
-  <meta name="description" content="Sharing God's unconditional love with our neighbors and communities through mission trips, service, and Son-shine ministries.">
+  <title>Devotional — Church of The Cross | Evergreen, CO</title>
+  <meta name="description" content="Daily devotionals and spiritual reflections from Church of the Cross in Evergreen, CO. Deepen your faith with inspiring readings.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    .devotional-card {
+      background: var(--bg-alt);
+      border-left: 4px solid var(--accent);
+      padding: 32px 36px;
+      margin-bottom: 32px;
+      border-radius: 2px;
+    }
+    .devotional-card .scripture {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .devotional-card .scripture-ref {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .devotional-card h3 {
+      margin-bottom: 12px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Easter Banner -->
   <div class="easter-banner">Christ has died, Christ has RISEN, Christ will come again!</div>
-
-
 
   <header class="site-header" id="site-header">
     <div class="header-inner">
@@ -31,7 +59,7 @@
               <li><a href="events.html">Events</a></li>
             </ul>
           </li>
-          <li class="nav-item has-dropdown active"><a href="#" class="nav-link">Ministries</a>
+          <li class="nav-item has-dropdown"><a href="#" class="nav-link">Ministries</a>
             <ul class="dropdown">
               <li><a href="outreach.html">Outreach</a></li>
               <li><a href="growth.html">Growth</a></li>
@@ -45,7 +73,7 @@
             </ul>
           </li>
           <li class="nav-item"><a href="sermons.html" class="nav-link">Sermons</a></li>
-          <li class="nav-item"><a href="devotional.html" class="nav-link">Devotional</a></li>
+          <li class="nav-item active"><a href="devotional.html" class="nav-link">Devotional</a></li>
           <li class="nav-item"><a href="give.html" class="nav-link">Give</a></li>
           <li class="nav-item"><a href="weekly-happenings.html" class="nav-link">Weekly Happenings</a></li>
         </ul>
@@ -60,81 +88,67 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero" style="background-image: url('images/outreach-hero.webp');">
+    <section class="hero" style="background-image: url('images/worship-hero.webp');">
       <div class="hero-content">
-        <span class="overline">Outreach</span>
-        <p class="tagline">Sharing God's unconditional love with our neighbors and communities.</p>
-        <h1>Faith needs action.</h1>
+        <span class="overline">Daily Faith</span>
+        <h1>Devotional</h1>
+        <p>Short, daily reflections rooted in Scripture to encourage and strengthen your walk with God — wherever you are.</p>
+        <div style="margin-top: 2rem;">
+          <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-accent" target="_blank" rel="noopener">Get Devotionals by Email</a>
+        </div>
       </div>
     </section>
 
-    <!-- 3 Outreach Categories -->
+    <!-- Devotionals -->
     <section class="section">
       <div class="section-header text-center">
-        <span class="overline">How We Serve</span>
-        <h2>Putting Faith Into Practice</h2>
-        <p>We believe the church is most alive when it's giving itself away. Here's how we serve our neighbors — near and far.</p>
+        <span class="overline">Reflections</span>
+        <h2>Recent Devotionals</h2>
+        <p>Each devotional is a short reflection to help you connect with God's word. Sign up to receive new devotionals in your inbox.</p>
       </div>
-      <div class="grid-3">
-        <div class="pillar-card">
-          <div class="pillar-icon">✈️</div>
-          <h3>Mission</h3>
-          <p>We organize group mission trips to Honduras, Belize, Uganda, and locally — partnering with communities to address real needs in the name of Christ. These trips change lives on both sides.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">🙌</div>
-          <h3>Service</h3>
-          <p>Members volunteer regularly at local Christian organizations and community projects throughout the Evergreen area. Whether it's a food pantry, a shelter, or a community cleanup, we show up.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon">☀️</div>
-          <h3>Son-shine</h3>
-          <p>Small acts of love make a big difference. Our Son-shine ministry sends birthday and anniversary cards, bakes farmer's market pies, collects toys for children globally, and carols at local senior facilities.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Prayer Request Section -->
-    <section class="section--alt section--full">
-      <div class="section" style="padding-top:0; padding-bottom:0;">
-        <div class="two-col">
-          <div>
-            <span class="overline">Prayer</span>
-            <h2>Submit a Prayer Request</h2>
-            <p>We believe in the power of prayer. Our congregation prays regularly for the needs of our community — both those within our church family and those beyond it.</p>
-            <p>Share your prayer request below and our team will lift you up in prayer. All requests are held in confidence.</p>
-          </div>
-          <div>
-            <form data-form="prayer" action="#">
-              <div class="form-group">
-                <label for="pr-name">Name <span style="color:var(--accent)">*</span></label>
-                <input type="text" id="pr-name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="pr-email">Email <span style="color:var(--accent)">*</span></label>
-                <input type="email" id="pr-email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="pr-subject">Subject</label>
-                <input type="text" id="pr-subject" name="subject" placeholder="Prayer Request">
-              </div>
-              <div class="form-group">
-                <label for="pr-request">Your Request <span style="color:var(--accent)">*</span></label>
-                <textarea id="pr-request" name="request" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit Prayer Request</button>
-              <div class="form-success">Thank you for sharing. Our congregation will be praying for you.</div>
-            </form>
-          </div>
+      <div style="max-width: 760px; margin: 48px auto 0;">
+
+        <div class="devotional-card">
+          <p class="scripture">"I can do all things through Christ who strengthens me."</p>
+          <span class="scripture-ref">Philippians 4:13</span>
+          <h3>Strength Beyond Our Own</h3>
+          <p>There are moments when life feels too heavy — when the challenges in front of us seem to outpace the strength within us. Paul wrote these words from prison, not from a place of comfort. His confidence wasn't in his own ability, but in the One who walks with us through every season.</p>
+          <p>Today, bring whatever feels heavy to God in prayer. Ask Him to renew your strength, and trust that His power is made perfect in our weakness (2 Corinthians 12:9).</p>
+          <p><em>Lord, thank You that I don't have to face today alone. Strengthen me through Your Spirit, and help me lean on You in every moment. Amen.</em></p>
         </div>
+
+        <div class="devotional-card">
+          <p class="scripture">"Be still, and know that I am God."</p>
+          <span class="scripture-ref">Psalm 46:10</span>
+          <h3>A Moment of Stillness</h3>
+          <p>In our busy, fast-paced lives, stillness can feel like a luxury. But God invites us into it — not as an escape, but as an encounter. To be still is to release our grip on control and acknowledge that God is God, and we are not.</p>
+          <p>Take a few quiet moments today. Put down your phone. Step away from the noise. Simply rest in the knowledge that the God who holds the universe in His hands also holds you.</p>
+          <p><em>Father, quiet my heart and mind. Help me to trust You with what I cannot control and to find peace in Your presence. Amen.</em></p>
+        </div>
+
+        <div class="devotional-card">
+          <p class="scripture">"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."</p>
+          <span class="scripture-ref">John 3:16</span>
+          <h3>The Heart of the Gospel</h3>
+          <p>These may be the most familiar words in all of Scripture — and yet they never grow old. At the center of everything we believe is this: God loves. God gives. God saves. Not because we earned it, but because love is who He is.</p>
+          <p>Let this truth anchor you today. No matter what you are going through, you are known and loved by the Creator of all things. That love sent Jesus — and it holds you now.</p>
+          <p><em>Thank You, God, for Your incredible love. May I never take for granted the gift of Your Son, and may that love overflow into everything I do today. Amen.</em></p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <p style="color: var(--text-light); margin-bottom: 20px;">Want to receive devotionals like these directly in your inbox?</p>
+        <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-primary" target="_blank" rel="noopener">Sign Up for Our Newsletter</a>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="cta-section">
-      <h2>Ready to serve?</h2>
-      <p>Whether you want to join a mission trip, volunteer locally, or contribute to the Son-shine ministry, we'd love to connect you with a way to serve.</p>
-      <a href="mailto:office@churchotc.com" class="btn btn-primary">Get Involved</a>
+      <h2>Grow deeper in your faith.</h2>
+      <p>Devotionals are just one way we help our community connect with God's word. Join us Sunday mornings or explore our Bible study and growth opportunities.</p>
+      <a href="growth.html" class="btn btn-primary">Explore Growth</a>
     </section>
   </main>
 
