@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devotional — Church of The Cross | Evergreen, CO</title>
+  <meta name="description" content="Daily devotionals and spiritual reflections from Church of the Cross in Evergreen, CO. Deepen your faith with inspiring readings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    .devotional-card {
+      background: var(--bg-alt);
+      border-left: 4px solid var(--accent);
+      padding: 32px 36px;
+      margin-bottom: 32px;
+      border-radius: 2px;
+    }
+    .devotional-card .scripture {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .devotional-card .scripture-ref {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .devotional-card h3 {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Easter Banner -->
+  <div class="easter-banner">Christ has died, Christ has RISEN, Christ will come again!</div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="images/logo.webp" alt="Church of the Cross" width="140" height="70">
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown"><a href="#" class="nav-link">Who We Are</a>
+            <ul class="dropdown">
+              <li><a href="about.html">About</a></li>
+              <li><a href="events.html">Events</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown"><a href="#" class="nav-link">Ministries</a>
+            <ul class="dropdown">
+              <li><a href="outreach.html">Outreach</a></li>
+              <li><a href="growth.html">Growth</a></li>
+              <li><a href="youth.html">Youth</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown"><a href="#" class="nav-link">Plan A Visit</a>
+            <ul class="dropdown">
+              <li><a href="worship.html">Worship</a></li>
+              <li><a href="calendar.html">Calendar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="sermons.html" class="nav-link">Sermons</a></li>
+          <li class="nav-item active"><a href="devotional.html" class="nav-link">Devotional</a></li>
+          <li class="nav-item"><a href="give.html" class="nav-link">Give</a></li>
+          <li class="nav-item"><a href="weekly-happenings.html" class="nav-link">Weekly Happenings</a></li>
+        </ul>
+      </nav>
+      <div class="header-social">
+        <a href="https://www.youtube.com/channel/UCgapPZ-cvSYc31N0Y9PE3ow" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.facebook.com/Evergreenchurchofthecross" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" style="background-image: url('images/worship-hero.webp');">
+      <div class="hero-content">
+        <span class="overline">Daily Faith</span>
+        <h1>Devotional</h1>
+        <p>Short, daily reflections rooted in Scripture to encourage and strengthen your walk with God — wherever you are.</p>
+        <div style="margin-top: 2rem;">
+          <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-accent" target="_blank" rel="noopener">Get Devotionals by Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devotionals -->
+    <section class="section">
+      <div class="section-header text-center">
+        <span class="overline">Reflections</span>
+        <h2>Recent Devotionals</h2>
+        <p>Each devotional is a short reflection to help you connect with God's word. Sign up to receive new devotionals in your inbox.</p>
+      </div>
+
+      <div style="max-width: 760px; margin: 48px auto 0;">
+
+        <div class="devotional-card">
+          <p class="scripture">"I can do all things through Christ who strengthens me."</p>
+          <span class="scripture-ref">Philippians 4:13</span>
+          <h3>Strength Beyond Our Own</h3>
+          <p>There are moments when life feels too heavy — when the challenges in front of us seem to outpace the strength within us. Paul wrote these words from prison, not from a place of comfort. His confidence wasn't in his own ability, but in the One who walks with us through every season.</p>
+          <p>Today, bring whatever feels heavy to God in prayer. Ask Him to renew your strength, and trust that His power is made perfect in our weakness (2 Corinthians 12:9).</p>
+          <p><em>Lord, thank You that I don't have to face today alone. Strengthen me through Your Spirit, and help me lean on You in every moment. Amen.</em></p>
+        </div>
+
+        <div class="devotional-card">
+          <p class="scripture">"Be still, and know that I am God."</p>
+          <span class="scripture-ref">Psalm 46:10</span>
+          <h3>A Moment of Stillness</h3>
+          <p>In our busy, fast-paced lives, stillness can feel like a luxury. But God invites us into it — not as an escape, but as an encounter. To be still is to release our grip on control and acknowledge that God is God, and we are not.</p>
+          <p>Take a few quiet moments today. Put down your phone. Step away from the noise. Simply rest in the knowledge that the God who holds the universe in His hands also holds you.</p>
+          <p><em>Father, quiet my heart and mind. Help me to trust You with what I cannot control and to find peace in Your presence. Amen.</em></p>
+        </div>
+
+        <div class="devotional-card">
+          <p class="scripture">"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."</p>
+          <span class="scripture-ref">John 3:16</span>
+          <h3>The Heart of the Gospel</h3>
+          <p>These may be the most familiar words in all of Scripture — and yet they never grow old. At the center of everything we believe is this: God loves. God gives. God saves. Not because we earned it, but because love is who He is.</p>
+          <p>Let this truth anchor you today. No matter what you are going through, you are known and loved by the Creator of all things. That love sent Jesus — and it holds you now.</p>
+          <p><em>Thank You, God, for Your incredible love. May I never take for granted the gift of Your Son, and may that love overflow into everything I do today. Amen.</em></p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <p style="color: var(--text-light); margin-bottom: 20px;">Want to receive devotionals like these directly in your inbox?</p>
+        <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-primary" target="_blank" rel="noopener">Sign Up for Our Newsletter</a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Grow deeper in your faith.</h2>
+      <p>Devotionals are just one way we help our community connect with God's word. Join us Sunday mornings or explore our Bible study and growth opportunities.</p>
+      <a href="growth.html" class="btn btn-primary">Explore Growth</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-section">
+        <h3>Join Us</h3>
+        <p>Worship: Sundays at 9:30 a.m.</p>
+        <address>28253 Meadow Drive<br>Evergreen, CO 80439</address>
+        <p style="margin-top:10px;"><a href="tel:3036744130">303-674-4130</a></p>
+        <p><a href="mailto:office@churchotc.com">office@churchotc.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Stay in Touch</h3>
+        <p>Get to know Church of the Cross through our newsletters, devotionals, and other inspiring content. Or come meet us at one of our upcoming services, Bible studies, or meet ups.</p>
+        <a href="https://lp.constantcontactpages.com/sl/gdDAxyG/hello" class="btn btn-outline-white" target="_blank" rel="noopener">Sign Up</a>
+        <div class="footer-social">
+          <a href="calendar.html" aria-label="Calendar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2a1 1 0 0 1 1 1v1h6V3a1 1 0 1 1 2 0v1h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2V3a1 1 0 0 1 1-1zm-3 8v10h14V10H5z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCgapPZ-cvSYc31N0Y9PE3ow" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.facebook.com/Evergreenchurchofthecross" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright"><p>© 2021–2024 Church of the Cross</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
